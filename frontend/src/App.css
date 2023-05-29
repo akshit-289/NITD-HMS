@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+
+.hostel {
+  margin: 0;
+  padding: 0;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.house {
+  width: 500px;
+  height: 500px;
+  border: 5px solid lightgray;
+  background: royalblue;
+  position: relative;
+}
+
+.wall {
+  position: absolute;
+  width: 370px;
+  height: 200px;
+  border: 2px solid white;
+  background: sienna;
+  left: 65px;
+  top: 193px;
+}
+
+.roof {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 240px solid transparent;
+  border-right: 240px solid transparent;
+  border-bottom: 172px solid burlywood;
+  left: 10px;
+  top: 21px;
+}
+
+.flr{
+  width: 367px;
+  height: 33px;
+  background: rgb(230, 198, 54);
+  justify-content: center;
+  text-align: center;
+}
+
+td, th {
+  width: 200px;
+  border: 1px solid black;
+    /* Adjust the border style as needed */
+  padding: 8px;
+}
+
+
