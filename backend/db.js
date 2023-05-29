@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const BASE_URL = process.env.BASE_URL;
 const mongoURI = 'mongodb+srv://nithostels:nitdelhihostels@cluster0.pmev2wb.mongodb.net/nithostelsdata?retryWrites=true&w=majority';
+mongoose.set('strictQuery', false);
 
 const mongoDb = async () => {
     await mongoose.connect(mongoURI, {useNewUrlParser: true},async(err, result)=>{

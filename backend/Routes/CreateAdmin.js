@@ -14,7 +14,6 @@ router.post("/createadmin",
    body('email', 'incorrect email').isEmail(),
    body('password', 'incorrect password').isLength({min: 5}), 
    async (req, res) => {
-
    const error =  validationResult(req);
    if(!error.isEmpty()){
       return res.status(400).json({ errors: error.array() });
@@ -68,17 +67,6 @@ router.get("/dhauladhar", async(req, res)=>{
       res.send("server error");
    }
 })
-
-// router.post("/add", async(req, res)=>{
-//    dhauladhar.findByIdAndUpdate(userId, { $push: { [`floors.${0}.${0}`]: req.body.name } }, (err, matrix) => {
-//       if (err) {
-//          console.error(err);
-//       } else {
-//          console.log(matrix);
-//          return res.status(400).json({success: true});              
-//       }
-//    });
-// })
 
 router.post("/hostelname", async (req, res) => {
    try {
