@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import {Link} from "react-router-dom";
-
+const BASE_URL = "https://nitd-hostel-management-system.onrender.com";
 function Hostel() {
     const [dhauladhar, setDhauladhar] = useState([]);
 
     const addFloor = async (e) => {
         e.preventDefault();
-        const response = await fetch(`http://localhost:5000/api/addfloor`, {
+        const response = await fetch(`${BASE_URL}/api/addfloor`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -25,7 +25,7 @@ function Hostel() {
     }
 
     const loadData = async () => {
-        let response = await fetch('http://localhost:5000/api/dhauladhar', {
+        let response = await fetch(`${BASE_URL}/api/dhauladhar`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

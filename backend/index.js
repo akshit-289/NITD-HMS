@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 5000;
+const BASE_URL ="https://nitd-hostel-management-system.onrender.com";
 const mongoDb = require("./db");
 mongoDb();
 app.use((req, res, next)=>{

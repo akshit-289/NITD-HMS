@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+const BASE_URL = "https://nitd-hostel-management-system.onrender.com";
 function Signup() {
   const [credentials, setCredentials] = useState({
     name: "",
@@ -10,7 +10,7 @@ function Signup() {
 
   const handleSubmit = async (e) => {
        e.preventDefault();
-       const response = await fetch("http://localhost:5000/api/createadmin",{
+       const response = await fetch(`${BASE_URL}/api/createadmin`,{
         method:'POST',
         headers:{
             'Content-Type':'application/json'

@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 import Room from "../components/RoomCard";
-
+const BASE_URL = "https://nitd-hostel-management-system.onrender.com";
 export default function Floor() {
     const [rooms, setRooms] = useState([]);
     const param = useParams();
 
     const addRoom = async (e) => {
         e.preventDefault();
-        const response = await fetch(`http://localhost:5000/api/addroom/${param.id}`, {
+        const response = await fetch(`${BASE_URL}/api/addroom/${param.id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ export default function Floor() {
     }
 
     const loadData = async () => {
-        let response = await fetch('http://localhost:5000/api/dhauladhar', {
+        let response = await fetch(`${BASE_URL}/api/dhauladhar`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

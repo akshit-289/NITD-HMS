@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+const BASE_URL = "https://nitd-hostel-management-system.onrender.com";
 
 export default function Room() {
     const [stud, setStud] = useState([]);
@@ -14,7 +15,7 @@ export default function Room() {
     const floor = Number(param.floor) + 1;
     const roomNo = (Number(param.floor) + 1) * 100 + Number(param.room) + 1;
     const loadData = async () => {
-        let response = await fetch('http://localhost:5000/api/dhauladhar', {
+        let response = await fetch(`${BASE_URL}/api/dhauladhar`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -25,7 +26,7 @@ export default function Room() {
     }
 
     const handleDel = async (props) => {
-        const response = await fetch(`http://localhost:5000/api/delStudent/${props.fl}/${props.ro}/${props.studID}`, {
+        const response = await fetch(`${BASE_URL}/api/delStudent/${props.fl}/${props.ro}/${props.studID}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -45,7 +46,7 @@ export default function Room() {
     const handleUpd = async (e) => {
         e.preventDefault();
         setUpdForm(false);
-        const response = await fetch(`http://localhost:5000/api/updStudent/${param.floor}/${param.room}/${studentID}`, {
+        const response = await fetch(`${BASE_URL}/api/updStudent/${param.floor}/${param.room}/${studentID}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -71,7 +72,7 @@ export default function Room() {
         e.preventDefault();
         setAddForm(false);
         console.log(floor + " " + roomNo);
-        const response = await fetch(`http://localhost:5000/api/updfloor/${floor}/${roomNo}`, {
+        const response = await fetch(`${BASE_URL}/api/updfloor/${floor}/${roomNo}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
