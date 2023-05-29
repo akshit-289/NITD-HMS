@@ -20,7 +20,7 @@ function Hostel() {
         }
         else {
             alert("Floor added");
-            window.location.reload();
+            // window.location.reload();
         }
     }
 

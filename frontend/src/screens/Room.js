@@ -39,7 +39,7 @@ export default function Room() {
         }
         else {
             alert("Student's details Deleted");
-            window.location.reload();
+            // window.location.reload();
         }
     }
 
@@ -60,7 +60,7 @@ export default function Room() {
         }
         else {
             alert("Student's details Updated");
-            window.location.reload();
+            // window.location.reload();
         }
     }
 
@@ -86,7 +86,7 @@ export default function Room() {
         }
         else {
             alert("Student's details added");
-            window.location.reload();
+            // window.location.reload();
         }
     }
 
