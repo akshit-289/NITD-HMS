@@ -21,7 +21,7 @@ export default function Floor() {
         }
         else {
             alert("Room added");
-            window.location.reload();
+            // window.location.reload();
         }
     }
 
