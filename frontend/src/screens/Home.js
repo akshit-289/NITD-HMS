@@ -2,16 +2,8 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Card from '../components/Card'
-import { useNavigate } from 'react-router-dom'
 
 function Home() {
-   
-  let navigate = useNavigate();
-
-  const handleClick2 = () => {
-    navigate("/addroom")
-  }
-
   return (
     <div>
       <Navbar />
